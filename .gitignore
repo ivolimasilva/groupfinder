@@ -1,4 +1,4 @@
 node_modules/
 public/app/assets/img/profile/*
 !public/app/assets/img/profile/default.jpg
-secrets.js
+private/assets/secrets.js

@@ -1,6 +1,41 @@
 <div class="col-md-12">
     <div class="card">
         <div class="header">
+            <h4 class="title">Matches</h4>
+            <p ng-hide="!curr_user.matches.length" class="category">
+                <br> Still no matches but don't give up. There's always hope for love!
+                <br>
+                <br>
+            </p>
+        </div>
+        <div class="content table-responsive table-full-width" ng-hide="curr_user.matches.length">
+            <table class="table table-hover table-striped text-center">
+                <thead>
+                    <th class="text-center col-md-2">Class</th>
+                    <th class="text-center col-md-3">Name</th>
+                    <th class="text-center col-md-4">About</th>
+                    <th class="text-center col-md-3">Actions</th>
+                </thead>
+                <tbody ng-repeat="match in matches">
+                    <tr>
+                        <td class="col-md-2">{{ match.initials }}</td>
+                        <td class="col-md-3">{{ match.name }}</td>
+                        <td class="col-md-4">{{ match.about }}</td>
+                        <td class="col-md-3">
+                            <a ng-hide="!match.facebook" href="{{ 'http://' + match.facebook }}" target="_blank" class="btn btn-simple"><i class="fa fa-facebook-square"></i></a>
+                            <a ng-hide="!match.github" href="{{ 'http://' + match.github }}" target="_blank" class="btn btn-simple"><i class="fa fa-github"></i></a>
+                            <a href="mailto: {{ match.email }}" target="_blank" class="btn btn-simple"><i class="fa fa-envelope-o"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="header">
             <h4 class="title">Your history</h4>
             <p ng-hide="curr_user.history.length" class="category">
                 <br> You do not have accepted or denied any student!
@@ -11,26 +46,25 @@
         <div class="content table-responsive table-full-width" ng-hide="!curr_user.history.length">
             <table class="table table-hover table-striped text-center">
                 <thead>
-                    <th class="text-center">Class</th>
-                    <th class="text-center">Name</th>
-                    <th class="text-center">About</th>
-                    <th class="text-center">Actions</th>
+                    <th class="text-center col-md-2">Class</th>
+                    <th class="text-center col-md-3">Name</th>
+                    <th class="text-center col-md-4">About</th>
+                    <th class="text-center col-md-3">Actions</th>
                 </thead>
                 <tbody ng-repeat="history in curr_user.history">
                     <tr ng-class="history.flag ? 'success' : 'danger'">
                         <td>{{ history.initials }}</td>
                         <td>{{ history.name }}</td>
                         <td>{{ history.about }}</td>
-                        <td>
-                            <a href="{{ 'http://' + (history.facebook || 'facebook.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-facebook-square"></i></a>
-                            <a href="{{ 'http://' + (history.github || 'github.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-github"></i></a>
+                        <td class="col-md-2">
+                            <a ng-hide="!history.facebook" href="{{ 'http://' + history.facebook }}" target="_blank" class="btn btn-simple"><i class="fa fa-facebook-square"></i></a>
+                            <a ng-hide="!history.github" href="{{ 'http://' + history.github }}" target="_blank" class="btn btn-simple"><i class="fa fa-github"></i></a>
                             <a href="mailto: {{ history.email }}" target="_blank" class="btn btn-simple"><i class="fa fa-envelope-o"></i></a>
                             <a ng-click="removeFromHistory(history)" title="Remove this entry from your history" class="btn btn-simple"><i class="glyphicon glyphicon-remove"></i></a>
                         </td>
                     </tr>
                 </tbody>
             </table>
-
         </div>
     </div>
 </div>
@@ -48,19 +82,19 @@
         <div class="content table-responsive table-full-width" ng-hide="!curr_user.likes.length">
             <table class="table table-hover table-striped text-center">
                 <thead>
-                    <th class="text-center">Class</th>
-                    <th class="text-center">Name</th>
-                    <th class="text-center">About</th>
-                    <th class="text-center">Actions</th>
+                    <th class="text-center col-md-2">Class</th>
+                    <th class="text-center col-md-3">Name</th>
+                    <th class="text-center col-md-4">About</th>
+                    <th class="text-center col-md-3">Actions</th>
                 </thead>
                 <tbody ng-repeat="likes in curr_user.likes">
                     <tr>
                         <td>{{ likes.initials }}</td>
                         <td>{{ likes.name }}</td>
                         <td>{{ likes.about }}</td>
-                        <td>
-                            <a href="{{ 'http://' + (likes.facebook || 'facebook.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-facebook-square"></i></a>
-                            <a href="{{ 'http://' + (likes.github || 'github.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-github"></i></a>
+                        <td class="col-md-2">
+                            <a ng-hide="!likes.facebook" href="{{ 'http://' + likes.facebook }}" target="_blank" class="btn btn-simple"><i class="fa fa-facebook-square"></i></a>
+                            <a ng-hide="!likes.github" href="{{ 'http://' + likes.github }}" target="_blank" class="btn btn-simple"><i class="fa fa-github"></i></a>
                             <a href="mailto: {{ likes.email }}" target="_blank" class="btn btn-simple"><i class="fa fa-envelope-o"></i></a>
                         </td>
                     </tr>

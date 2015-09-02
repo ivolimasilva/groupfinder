@@ -6,7 +6,7 @@
         <div class="col-md-4">
             <div class="card card-user hide-on-mobile">
                 <div class="image">
-                    <img src="assets/img/cover.jpg"/>
+                    <img src="assets/img/cover.jpg" />
                 </div>
                 <div class="content">
                     <div class="author">
@@ -26,16 +26,11 @@
                         {{ classToLoad.about }}
                     </p>
                     <br>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-success">Accept</button>
-                        <button type="button" class="btn btn-default">Pass</button>
-                        <button type="button" class="btn btn-danger">Deny</button>
-                    </div>
-                    <br>
                     <hr>
                     <div class="text-center">
-                        <a href="{{ 'http://' + (curr_user.facebook || 'facebook.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-facebook-square"></i></a>
-                        <a href="{{ 'http://' + (curr_user.github || 'github.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-github"></i></a>
+
+                        <a ng-hide="!curr_user.facebook" href="{{ 'http://' + curr_user.facebook }}" target="_blank" class="btn btn-simple"><i class="fa fa-facebook-square"></i></a>
+                        <a ng-hide="!curr_user.github" href="{{ 'http://' + curr_user.github }}" target="_blank" class="btn btn-simple"><i class="fa fa-github"></i></a>
                         <a href="mailto: {{ curr_user.email }}" target="_blank" class="btn btn-simple"><i class="fa fa-envelope-o"></i></a>
                     </div>
                 </div>
@@ -140,7 +135,7 @@
         <div class="col-md-4" ng-hide="!students">
             <div class="card card-user">
                 <div class="image">
-                    <img src="assets/img/cover.jpg"/>
+                    <img src="assets/img/cover.jpg" />
                 </div>
                 <div class="content">
                     <div class="author">
@@ -166,9 +161,9 @@
                     </div>
                     <br>
                     <hr>
-                    <div class="text-center">
-                        <a href="{{ 'http://' + (students[index].facebook || 'facebook.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-facebook-square"></i></a>
-                        <a href="{{ 'http://' + (students[index].github || 'github.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-github"></i></a>
+                    <div class="text-center">                        
+                        <a ng-hide="!students[index].facebook" href="{{ 'http://' + students[index].facebook }}" target="_blank" class="btn btn-simple"><i class="fa fa-facebook-square"></i></a>
+                        <a ng-hide="!students[index].github" href="{{ 'http://' + students[index].github }}" target="_blank" class="btn btn-simple"><i class="fa fa-github"></i></a>
                         <a href="mailto: {{ students[index].email }}" target="_blank" class="btn btn-simple"><i class="fa fa-envelope-o"></i></a>
                     </div>
                 </div>
