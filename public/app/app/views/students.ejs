@@ -2,13 +2,13 @@
     <div class="card">
         <div class="header">
             <h4 class="title">Matches</h4>
-            <p ng-hide="!curr_user.matches.length" class="category">
+            <p ng-hide="matches.length" class="category">
                 <br> Still no matches but don't give up. There's always hope for love!
                 <br>
                 <br>
             </p>
         </div>
-        <div class="content table-responsive table-full-width" ng-hide="curr_user.matches.length">
+        <div class="content table-responsive table-full-width" ng-hide="!matches.length">
             <table class="table table-hover table-striped text-center">
                 <thead>
                     <th class="text-center col-md-2">Class</th>
