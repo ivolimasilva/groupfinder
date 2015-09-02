@@ -1,0 +1,3 @@
+node_modules/
+public/app/assets/img/profile/*
+!public/app/assets/img/profile/default.jpg

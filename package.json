@@ -1,0 +1,32 @@
+{
+    "name": "groupfinder",
+    "version": "1.0.0",
+    "description": "Tinder like app for work groups.",
+    "main": "server.js",
+    "dependencies": {
+        "bcrypt-nodejs": "0.0.3",
+        "bluebird": "^2.9.34",
+        "body-parser": "^1.13.3",
+        "cookie-parser": "^1.3.5",
+        "ejs": "^2.3.3",
+        "emailjs": "^0.3.16",
+        "express": "^4.13.0",
+        "fs": "0.0.2",
+        "jsonwebtoken": "^5.0.4",
+        "mongoose": "^4.1.2",
+        "morgan": "^1.6.1",
+        "multiparty": "^4.1.2",
+        "path": "^0.11.14"
+    },
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/IvoLimaSilva/groupfinder.git"
+    },
+    "author": "Ivo Lima Silva",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/IvoLimaSilva/groupfinder/issues"
+    },
+    "homepage": "https://github.com/IvoLimaSilva/groupfinder#readme"
+}

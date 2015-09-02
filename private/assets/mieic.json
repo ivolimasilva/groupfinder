@@ -1,0 +1,430 @@
+[
+    [
+        [
+            {
+                "code": "EIC0011",
+                "initials": "MDIS",
+                "name": "Matemática Discreta"
+            },
+            {
+                "code": "EIC0083",
+                "initials": "AOCO",
+                "name": "Arquitectura e Organização de Computadores"
+            },
+            {
+                "code": "EIC0005",
+                "initials": "FPRO",
+                "name": "Fundamentos da Programação"
+            },
+            {
+                "code": "EIC0004",
+                "initials": "AMAT",
+                "name": "Análise Matemática"
+            },
+            {
+                "code": "EIC0003",
+                "initials": "ALGE",
+                "name": "Álgebra"
+            },
+            {
+                "code": "FEUP002",
+                "initials": "PF",
+                "name": "Projecto FEUP"
+            }
+        ],
+        [
+            {
+                "code": "EIC0105",
+                "initials": "MEST",
+                "name": "Métodos Estatísticos"
+            },
+            {
+                "code": "EIC0012",
+                "initials": "PROG",
+                "name": "Programação"
+            },
+            {
+                "code": "EIC0010",
+                "initials": "FISI1",
+                "name": "Física 1"
+            },
+            {
+                "code": "EIC0009",
+                "initials": "CMAT",
+                "name": "Complementos de Matemática"
+            },
+            {
+                "code": "EIC0016",
+                "initials": "MPCP",
+                "name": "Microprocessadores e Computadores Pessoais"
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "code": "EIC0022",
+                "initials": "TCOM",
+                "name": "Teoria da Computação"
+            },
+            {
+                "code": "EIC0021",
+                "initials": "MNUM",
+                "name": "Métodos Numéricos"
+            },
+            {
+                "code": "EIC0014",
+                "initials": "FISI2",
+                "name": "Física II"
+            },
+            {
+                "code": "EIC0013",
+                "initials": "AEDA",
+                "name": "Algoritmos e Estruturas de Dados"
+            },
+            {
+                "code": "EIC0020",
+                "initials": "LCOM",
+                "name": "Laboratório de Computadores"
+            }
+        ],
+        [
+            {
+                "code": "EIC0023",
+                "initials": "BDAD",
+                "name": "Bases de Dados"
+            },
+            {
+                "code": "EIC0110",
+                "initials": "CAL",
+                "name": "Concepção e Análise de Algoritmos"
+            },
+            {
+                "code": "EIC0019",
+                "initials": "CGRA",
+                "name": "Computação Gráfica"
+            },
+            {
+                "code": "EIC0027",
+                "initials": "SOPE",
+                "name": "Sistemas Operativos"
+            },
+            {
+                "code": "EIC0111",
+                "initials": "LPOO",
+                "name": "Laboratório de Programação Orientada por Objectos"
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "code": "EIC0026",
+                "initials": "PLOG",
+                "name": "Programação em Lógica"
+            },
+            {
+                "code": "EIC0084",
+                "initials": "LAIG",
+                "name": "Laboratório de Aplicações com Interface Gráfica"
+            },
+            {
+                "code": "EIC0024",
+                "initials": "ESOF",
+                "name": "Engenharia de Software"
+            },
+            {
+                "code": "EIC0032",
+                "initials": "RCOM",
+                "name": "Redes de Computadores"
+            },
+            {
+                "code": "EIC0112",
+                "initials": "LTW",
+                "name": "Linguagens e Tecnologias Web"
+            }
+        ],
+        [
+            {
+                "code": "EIC0085",
+                "initials": "LBAW",
+                "name": "Laboratório de Bases de Dados e Aplicações Web"
+            },
+            {
+                "code": "EIC0029",
+                "initials": "IART",
+                "name": "Inteligência Artificial"
+            },
+            {
+                "code": "EIC0028",
+                "initials": "COMP",
+                "name": "Compiladores"
+            },
+            {
+                "code": "EIC0036",
+                "initials": "SDIS",
+                "name": "Sistemas Distribuídos"
+            },
+            {
+                "code": "EIC0031",
+                "initials": "PPIN",
+                "name": "Proficiência Pessoal e Interpessoal"
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "code": "EIC0040",
+                "initials": "SINF",
+                "name": "Sistemas de Informação"
+            },
+            {
+                "code": "EIC0086",
+                "initials": "LDSO",
+                "name": "Laboratório de Desenvolvimento de Software"
+            },
+            {
+                "code": "EIC0034",
+                "initials": "GEMP",
+                "name": "Gestão de Empresas"
+            },
+            {
+                "code": "EIC0033",
+                "initials": "AIAD",
+                "name": "Agentes e Inteligência Artificial Distribuída"
+            },
+            {
+                "code": "EIC0039",
+                "initials": "MFES",
+                "name": "Métodos Formais em Engenharia de Software"
+            }
+        ],
+        [
+            {
+                "code": "EIC0037",
+                "initials": "IOPE",
+                "name": "Investigação Operacional"
+            },
+            {
+                "code": "EIC0106",
+                "initials": "LGPR",
+                "name": "Laboratório de Gestão de Projectos"
+            },
+            {
+                "code": "EIC0088",
+                "initials": "APSI",
+                "name": "Algoritmos de Processamento de Sinal"
+            },
+            {
+                "code": "EIC0048",
+                "initials": "ASSO",
+                "name": "Arquitectura de Sistemas de Software"
+            },
+            {
+                "code": "EIC0089",
+                "initials": "CPAR",
+                "name": "Computação Paralela"
+            },
+            {
+                "code": "EIC0090",
+                "initials": "DJCO",
+                "name": "Desenvolvimento de Jogos de Computador"
+            },
+            {
+                "code": "EIC0053",
+                "initials": "ERSS",
+                "name": "Engenharia de Requisitos de Sistemas de Software"
+            },
+            {
+                "code": "EIC0091",
+                "initials": "GOLO",
+                "name": "Gestão de Operações e Logística"
+            },
+            {
+                "code": "EIC0107",
+                "initials": "LAPD",
+                "name": "Linguagens de Anotação e Processamento de Documentos"
+            },
+            {
+                "code": "EIC0061",
+                "initials": "MARK",
+                "name": "Marketing"
+            },
+            {
+                "code": "EIC0064",
+                "initials": "MNSE",
+                "name": "Multimédia e Novos Serviços"
+            },
+            {
+                "code": "EIC0061",
+                "initials": "MARK",
+                "name": "Marketing"
+            },
+            {
+                "code": "EIC0092",
+                "initials": "SRSI",
+                "name": "Serviços de Rede e de Sistema"
+            },
+            {
+                "code": "EIC0093",
+                "initials": "SSEN",
+                "name": "Sinais e Sensores"
+            },
+            {
+                "code": "EIC0073",
+                "initials": "SCRI",
+                "name": "Sistemas Críticos"
+            },
+            {
+                "code": "EIC0102",
+                "initials": "SETR",
+                "name": "Sistemas Embutidos e de Tempo Real"
+            },
+            {
+                "code": "EIC0094",
+                "initials": "SGEO",
+                "name": "Sistemas Geoespaciais"
+            },
+            {
+                "code": "EIC0075",
+                "initials": "SINS",
+                "name": "Sistemas Industriais"
+            },
+            {
+                "code": "EIC0076",
+                "initials": "TBDA",
+                "name": "Tecnologias de Bases de Dados"
+            },
+            {
+                "code": "EIC0077",
+                "initials": "TDIN",
+                "name": "Tecnologias de Distribuição e Integração"
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "code": "EIC0044",
+                "initials": "APIN",
+                "name": "Análise de Projectos de Investimento"
+            },
+            {
+                "code": "EIC0046",
+                "initials": "ADAD",
+                "name": "Armazéns de Dados"
+            },
+            {
+                "code": "EIC0095",
+                "initials": "AGRS",
+                "name": "Arquitectura e Gestão de Redes e Sistemas"
+            },
+            {
+                "code": "EIC0049",
+                "initials": "AACO",
+                "name": "Arquitecturas Avançadas de Computadores"
+            },
+            {
+                "code": "EIC0050",
+                "initials": "CMOV",
+                "name": "Computação Móvel"
+            },
+            {
+                "code": "EIC0082",
+                "initials": "CMO",
+                "name": "Comunicações Móveis"
+            },
+            {
+                "code": "EIC0108",
+                "initials": "DAPI",
+                "name": "Descrição, Armazenamento e Pesquisa de Informação"
+            },
+            {
+                "code": "EIC0096",
+                "initials": "ECAC",
+                "name": "Extracção de Conhecimento e Aprendizagem Computacional"
+            },
+            {
+                "code": "EIC0109",
+                "initials": "GQUA",
+                "name": "Gestão da Qualidade"
+            },
+            {
+                "code": "EIC0097",
+                "initials": "GIEM",
+                "name": "Gestão de Informação Empresarial"
+            },
+            {
+                "code": "EIC0057",
+                "initials": "IPCO",
+                "name": "Interacção Pessoa-Computador"
+            },
+            {
+                "code": "EIC0062",
+                "initials": "MADS",
+                "name": "Metodologias Ágeis de Desenvolvimento de Software"
+            },
+            {
+                "code": "EIC0098",
+                "initials": "MSSI",
+                "name": "Modelação e Simulação de Sistemas"
+            },
+            {
+                "code": "EIC0067",
+                "initials": "PESI",
+                "name": "Planeamento Estratégico de Sistemas de Informação"
+            },
+            {
+                "code": "EIC0068",
+                "initials": "PFAL",
+                "name": "Processamento da Fala"
+            },
+            {
+                "code": "EIC0070",
+                "initials": "RVAU",
+                "name": "Realidade Virtual e Aumentada"
+            },
+            {
+                "code": "EIC0071",
+                "initials": "ROBO",
+                "name": "Robótica"
+            },
+            {
+                "code": "EIC0072",
+                "initials": "SSIN",
+                "name": "Segurança em Sistemas Informáticos"
+            },
+            {
+                "code": "EIC0099",
+                "initials": "SESI",
+                "name": "Seminário de Engenharia de Software e Sistemas de Informação"
+            },
+            {
+                "code": "EIC0100",
+                "initials": "SRTI",
+                "name": "Seminário de Redes e Tecnologias da Informação"
+            },
+            {
+                "code": "EIC0101",
+                "initials": "SSIM",
+                "name": "Seminário de Sistemas Inteligentes, Interacção e Multimédia"
+            },
+            {
+                "code": "EIC0074",
+                "initials": "SADE",
+                "name": "Sistemas de Apoio à Decisão"
+            },
+            {
+                "code": "EIC0113",
+                "initials": "TVVS",
+                "name": "Teste, Verificação e Validação de Software"
+            },
+            {
+                "code": "EIC0104",
+                "initials": "VCOM",
+                "name": "Visão por Computador"
+            }
+        ]
+    ]
+]

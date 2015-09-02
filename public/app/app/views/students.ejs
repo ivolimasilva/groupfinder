@@ -1,0 +1,72 @@
+<div class="col-md-12">
+    <div class="card">
+        <div class="header">
+            <h4 class="title">Your history</h4>
+            <p ng-hide="curr_user.history.length" class="category">
+                <br> You do not have accepted or denied any student!
+                <br>
+                <br>
+            </p>
+        </div>
+        <div class="content table-responsive table-full-width" ng-hide="!curr_user.history.length">
+            <table class="table table-hover table-striped text-center">
+                <thead>
+                    <th class="text-center">Class</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">About</th>
+                    <th class="text-center">Actions</th>
+                </thead>
+                <tbody ng-repeat="history in curr_user.history">
+                    <tr ng-class="history.flag ? 'success' : 'danger'">
+                        <td>{{ history.initials }}</td>
+                        <td>{{ history.name }}</td>
+                        <td>{{ history.about }}</td>
+                        <td>
+                            <a href="{{ 'http://' + (history.facebook || 'facebook.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-facebook-square"></i></a>
+                            <a href="{{ 'http://' + (history.github || 'github.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-github"></i></a>
+                            <a href="mailto: {{ history.email }}" target="_blank" class="btn btn-simple"><i class="fa fa-envelope-o"></i></a>
+                            <a ng-click="removeFromHistory(history)" title="Remove this entry from your history" class="btn btn-simple"><i class="glyphicon glyphicon-remove"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="header">
+            <h4 class="title">Who liked you</h4>
+            <p ng-hide="curr_user.likes.length" class="category">
+                <br> Nobody likes you :'( #rip
+                <br>
+                <br>
+            </p>
+        </div>
+        <div class="content table-responsive table-full-width" ng-hide="!curr_user.likes.length">
+            <table class="table table-hover table-striped text-center">
+                <thead>
+                    <th class="text-center">Class</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">About</th>
+                    <th class="text-center">Actions</th>
+                </thead>
+                <tbody ng-repeat="likes in curr_user.likes">
+                    <tr>
+                        <td>{{ likes.initials }}</td>
+                        <td>{{ likes.name }}</td>
+                        <td>{{ likes.about }}</td>
+                        <td>
+                            <a href="{{ 'http://' + (likes.facebook || 'facebook.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-facebook-square"></i></a>
+                            <a href="{{ 'http://' + (likes.github || 'github.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-github"></i></a>
+                            <a href="mailto: {{ likes.email }}" target="_blank" class="btn btn-simple"><i class="fa fa-envelope-o"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

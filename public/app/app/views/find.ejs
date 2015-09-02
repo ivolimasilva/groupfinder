@@ -1,0 +1,181 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- START OF PREVIEW PROFILE -->
+
+        <div class="col-md-4">
+            <div class="card card-user hide-on-mobile">
+                <div class="image">
+                    <img src="assets/img/cover.jpg"/>
+                </div>
+                <div class="content">
+                    <div class="author">
+                        <a href="#">
+                            <img class="avatar border-gray" src="{{ curr_user.avatar }}" alt="..." />
+                            <h4 class="title">
+                                {{ curr_user.name }}
+                                <br>
+                                <small>(preview)</small>
+                            </h4>
+                        </a>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <p class="description text-center">
+                        {{ classToLoad.about }}
+                    </p>
+                    <br>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-success">Accept</button>
+                        <button type="button" class="btn btn-default">Pass</button>
+                        <button type="button" class="btn btn-danger">Deny</button>
+                    </div>
+                    <br>
+                    <hr>
+                    <div class="text-center">
+                        <a href="{{ 'http://' + (curr_user.facebook || 'facebook.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-facebook-square"></i></a>
+                        <a href="{{ 'http://' + (curr_user.github || 'github.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-github"></i></a>
+                        <a href="mailto: {{ curr_user.email }}" target="_blank" class="btn btn-simple"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END OF PREVIEW PROFILE -->
+
+        <!-- START OF CLASSES -->
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Your Classes</h4>
+                </div>
+                <div class="content">
+                    <form>
+                        <!--div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="sel1">Course:</label>
+                                        <select class="form-control" id="sel1" disabled>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="sel1">Year:</label>
+                                        <select class="form-control" id="sel1" disabled>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="sel1">Semester:</label>
+                                        <select class="form-control" id="sel2" disabled>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="sel1">Classes:</label>
+                                        <select class="form-control" id="sel1" ng-model="classToLoad.code" ng-disabled="curr_user.classes == 0" ng-change="updateText(classToLoad)">
+                                            <option ng-repeat="class in curr_user.classes" value="{{ class.code }}">
+                                                [{{ class.initials }}] {{ class.name }} - {{ class.code }}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label class="pull-left">
+                                    <span class="{{ students_message_class }}"><br>
+                                        {{ students_message }}
+                                        <span ng-show="students_message_class == 'information'" class="pe-7s-check"></span>
+                                    <span ng-show="students_message_class == 'error'" class="pe-7s-close-circle"></span>
+                                    </span>
+                                </label>
+                                <button type="submit" class="btn btn-info btn-fill pull-right" ng-click="loadStudents(classToLoad)" ng-disabled="!classToLoad.code">Load students</button>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- END OF CLASSES -->
+
+        <!-- START OF PICK A CLASS -->
+
+        <div class="col-md-4" ng-hide="students">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Pick a class</h4>
+                </div>
+                <div class="content text-center">
+                    <label>
+                        <span class="glyphicon glyphicon-arrow-left hide-on-mobile"></span>
+                        <span class="glyphicon glyphicon-arrow-up show-on-mobile"></span> Pick a class
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- END OF PICK A CLASS -->
+
+        <!-- START OF STUDENT PROFILE -->
+
+        <div class="col-md-4" ng-hide="!students">
+            <div class="card card-user">
+                <div class="image">
+                    <img src="assets/img/cover.jpg"/>
+                </div>
+                <div class="content">
+                    <div class="author">
+                        <a href="#">
+                            <img class="avatar border-gray" src="{{ students[index].avatar }}" alt="..." />
+                            <h4 class="title">
+                                {{ students[index].name }}
+                                <br>
+                            </h4>
+                        </a>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <p class="description text-center">
+                        {{ students[index].about }}
+                    </p>
+                    <br>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-success" ng-click="accept(index)">Accept</button>
+                        <button type="button" class="btn btn-default" ng-click="pass(index)">Pass</button>
+                        <button type="button" class="btn btn-danger" ng-click="deny(index)">Deny</button>
+                    </div>
+                    <br>
+                    <hr>
+                    <div class="text-center">
+                        <a href="{{ 'http://' + (students[index].facebook || 'facebook.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-facebook-square"></i></a>
+                        <a href="{{ 'http://' + (students[index].github || 'github.com') }}" target="_blank" class="btn btn-simple"><i class="fa fa-github"></i></a>
+                        <a href="mailto: {{ students[index].email }}" target="_blank" class="btn btn-simple"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END OF STUDENT PROFILE -->
+
+    </div>
+</div>

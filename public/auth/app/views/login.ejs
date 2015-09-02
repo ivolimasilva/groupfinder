@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="header">
+        <h4 class="title">Login</h4>
+        <p class="category">Don't have an account? <a href="register">Click here</a> to register!</p>
+    </div>
+    <div class="content">
+        <form name="loginForm" class="text-center" novalidate>
+            <div class="form-group text-left">
+                <label>Email</label>
+                <input type="email" name="email" ng-model="user.email" class="form-control" required>
+            </div>
+            <div class="form-group text-left">
+                <label>Password</label>
+                <input type="password" name="password" ng-model="user.password" class="form-control" required>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-default" ng-click="login(user)">Login</button>
+        </form>
+
+        <div class="footer">
+            <hr>
+            <div class="stats {{ message_class }}">
+                {{ message }}
+            </div>
+        </div>
+    </div>
+</div>
