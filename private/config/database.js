@@ -166,21 +166,18 @@
                 email: user.email
             }, function (err, user) {
                 if (user) {
-
                     bcrypt.compare(password, user.password, function (err, res) {
                         if (res === true) {
                             if (user.valid) {
-
                                 user = user.toObject();
                                 resolve(user._id);
-
                             } else {
-                                reject('Check your inbox (probably in the spam-folder) and validate your account.');
+                                reject('Check your inbox (Webmail > \'Configurações pessoas\' > \'Pastas\' > Check \'spam\') and validate your account.');
                             }
+                        } else {
+                            reject('Incorrect password.');
                         }
                     });
-
-
                 } else if (err) {
                     reject(err);
                 }
@@ -324,32 +321,39 @@
 
     exports.updateUserPassword = function (userid, password) {
 
+        var password = password.old;
+
         return new Promise(function (resolve, reject) {
+
             User.findOne({
-
-                _id: userid,
-                password: password.old
-
+                _id: userid
             }, function (err, user) {
                 if (user) {
 
-                    User.update({
-                            _id: userid,
-                            password: password.old
-                        }, {
-                            password: password.new
-                        },
-                        function (err) {
-                            if (err) {
-                                reject(err);
-                            } else {
-                                resolve();
-                            }
-                        });
+                    bcrypt.compare(password, user.password, function (err, res) {
 
+                        if (res === true) {
+                            User.update({
+                                    _id: userid
+                                }, {
+                                    password: password.new
+                                },
+                                function (err) {
+                                    if (err) {
+                                        reject(err);
+                                    } else {
+                                        resolve();
+                                    }
+                                });
+                        } else {
+                            reject('Incorrect password.');
+                        }
+
+                    });
                 } else {
-                    reject('Incorrect password.');
+                    reject('Invalid error.');
                 }
+
                 if (err) {
                     reject(err);
                 }
