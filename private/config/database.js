@@ -161,6 +161,11 @@
 
         var password = user.password;
 
+        bcrypt.hash(password, null, null, function (err, hash) {
+            console.log(password);
+            console.log(hash);
+        });
+
         return new Promise(function (resolve, reject) {
             User.findOne({
                 email: user.email
@@ -321,8 +326,6 @@
 
     exports.updateUserPassword = function (userid, password) {
 
-        var password = password.old;
-
         return new Promise(function (resolve, reject) {
 
             User.findOne({
@@ -330,21 +333,26 @@
             }, function (err, user) {
                 if (user) {
 
-                    bcrypt.compare(password, user.password, function (err, res) {
+                    bcrypt.compare(password.old, user.password, function (err, res) {
 
                         if (res === true) {
-                            User.update({
-                                    _id: userid
-                                }, {
-                                    password: password.new
-                                },
-                                function (err) {
-                                    if (err) {
-                                        reject(err);
-                                    } else {
-                                        resolve();
-                                    }
-                                });
+
+                            bcrypt.hash(password.new, null, null, function (err, hash) {
+
+                                User.update({
+                                        _id: userid
+                                    }, {
+                                        password: hash
+                                    },
+                                    function (err) {
+                                        if (err) {
+                                            reject(err);
+                                        } else {
+                                            resolve();
+                                        }
+                                    });
+                            });
+
                         } else {
                             reject('Incorrect password.');
                         }
